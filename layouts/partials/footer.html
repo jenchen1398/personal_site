@@ -1,0 +1,36 @@
+{{ "<!-- Footer -->" | safeHTML}}
+    <footer id="footer">
+        <div class="inner">
+            <section>
+                <div class="contact-method column">
+                    <span class="icon alt fa-envelope"></span>
+                    {{ range .Site.Params.Contact.email }}
+                    <h3>{{ .title }}</h3>
+                    <a href="mailto:{{ .email }}">{{ .email }}</a>
+                    {{ end }}
+                </div>
+              
+                 <div class="contact-method column">
+                        <span class="icon alt fa-linkedin"></span>
+                        {{ range .Site.Params.Contact.linkedin }}
+                        <h3>{{ .title }}</h3>
+                        <a href="https://{{ .linkedin }}" target="_blank">{{ .linkedin }}</a>
+                        {{ end }}
+                </div>
+                
+                  <div class="contact-method column">
+                    <span class="icon alt fa-github"></span>
+                    {{ range .Site.Params.Contact.github }}
+                    <h3>{{ .title }}</h3>
+                    <a href="https://{{ .github }}" target="_blank">{{ .github }}</a>
+                    {{ end }}
+                </div>
+            </section>
+            <ul class="copyright">
+                <li>&copy; {{ .Site.Params.Footer.copyright }}</li>
+                {{ range .Site.Params.Footer.quicklinks}}
+                <li>{{ .text }} <a href="{{ .url | safeHTML }}">{{ .alt }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </footer>
