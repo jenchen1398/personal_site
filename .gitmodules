@@ -1,3 +1,7 @@
 [submodule "themes/forty"]
 	path = themes/forty
 	url = https://github.com/MarcusVirg/forty.git
+[submodule "public"]
+	path = public
+	url = https://github.com/jenchen1398/jenchen1398.github.io.git
+	branch = master
